@@ -3,7 +3,7 @@ package Game;
 import java.util.Scanner;
 
 public class Game {
-public static String computeranswer(String[] options) {
+public static String ComputerAnswer(String[] options) {
 		
 		String result= options[(int) (Math.random() * options.length)];
 		
@@ -11,7 +11,7 @@ public static String computeranswer(String[] options) {
 		
 	}
 	
-	public static String Useranswer() {
+	public static String UserAnswer() {
 		
 		String result;
 		Scanner input=new Scanner(System.in);
@@ -20,15 +20,15 @@ public static String computeranswer(String[] options) {
 		return result;
 	}
 	
-	public static String results(String computeranswer,String useranswer) {
+	public static String results(String ComputerAnswer,String UserAnswer) {
 		String result;
 		
-		if(computeranswer.equals(useranswer))
+		if(ComputerAnswer.equals(UserAnswer))
 			result= "It is a draw!";
 		
-		else if((computeranswer.equals ("rock") && (useranswer.equals ("paper"))) ||
-				(computeranswer. equals ("paper") && (useranswer.equals ("scissors"))) ||
-				(computeranswer.equals ("scissors") && (useranswer.equals ("rock"))))
+		else if((ComputerAnswer.equals ("rock") && (UserAnswer.equals ("paper"))) ||
+				(ComputerAnswer. equals ("paper") && (UserAnswer.equals ("scissors"))) ||
+				(ComputerAnswer.equals ("scissors") && (UserAnswer.equals ("rock"))))
 				result="User win";
 		else
 			result="Computer wins";
@@ -45,15 +45,15 @@ public static String computeranswer(String[] options) {
 		
 		String[] options={"rock","paper","scissors"};
 		
-		String computeranswer= computeranswer(options);
+		String ComputerAnswer= ComputerAnswer(options);
 		
-		System.out.println(computeranswer);
+		System.out.println(ComputerAnswer);
 		
-		String useranswer= Useranswer();
+		String UserAnswer= UserAnswer();
 		
 		//System.out.println(useranswer);
 		
-		String results= results(computeranswer,useranswer);
+		String results= results(ComputerAnswer,UserAnswer);
 		System.out.println(results);
 
 	}
